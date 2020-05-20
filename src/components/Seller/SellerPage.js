@@ -20,6 +20,7 @@ const Title = styled.h1`
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
+    margin: auto;
 `;
 
 const Container = styled.div`

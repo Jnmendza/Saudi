@@ -49,7 +49,7 @@ function AddModal({ getItems }) {
           <Modal.Body>
             <form onSubmit={handleSubmit}> 
                 <label>
-                    Name:
+                    Item Name:
                     <input type='text' name='name' value={product.name} onChange={changeHandler} />
                 </label>
                 <label>    
@@ -66,7 +66,7 @@ function AddModal({ getItems }) {
                 </label>
               <label>
                 Description:
-                    <input type='text' name='description' value={product.description} onChange={changeHandler} />
+                    <textarea name='description' value={product.description} onChange={changeHandler}></textarea>
               </label>
 
             </form>

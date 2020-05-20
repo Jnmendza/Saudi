@@ -115,4 +115,3 @@ export default withRouter(connect(
     { login }
 )(Login));
 
-// <a href="/"> <img src={Logoimg} alt="logo" height="220px" width="220px" /></a>

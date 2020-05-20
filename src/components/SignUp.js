@@ -2,14 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { register } from "../actions";
 import { withRouter } from "react-router-dom"
-import HomeSplash from '../images/HomeSplash.jpg'
+import BGimage from '../images/beans.jpg'
 import NavBar from './Navbar.js'
 import styled from 'styled-components';
-import Logoimg from '../images/Logo_white.png'
 
 
 const SignupContainer = styled.div`
-    background-image: url(${HomeSplash});
+    background-image: url(${BGimage});
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -20,7 +19,7 @@ const SignupContainer = styled.div`
 const InputContainer = styled.div`
     height: 40%;
     width: 35%;
-    margin: auto 53%;
+    margin: 10% 55%;
 `
 
 const Title = styled.h2`
@@ -85,9 +84,8 @@ class Signup extends React.Component {
           <div className="login">
               <SignupContainer>
                 <NavBar />
-                <a href="/"> <img src={Logoimg} alt="logo" height="220px" width="220px" /></a>
                 <InputContainer>
-                <Title>Sign Up</Title>
+                <Title>SIGN UP</Title>
                 <form onSubmit={this.handleSubmit}>
                         <SignupInput
                             className="login-input"
@@ -107,7 +105,7 @@ class Signup extends React.Component {
                             onChange={this.handleChange}
                         />
                     <br />
-                    <SignupButton>Signup</SignupButton>
+                    <SignupButton>Sign Up</SignupButton>
                 </form>
                 </InputContainer>
               </SignupContainer>

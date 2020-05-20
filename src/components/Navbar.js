@@ -64,7 +64,6 @@ const NavBar= () =>{
                 <NavContainer>
                     <NavLink to='/'>Home</NavLink>
                     <NavLink to='/about'>About Us</NavLink>
-                    <NavLink to='/inventory-list'>Shop</NavLink>
                     {navLinks}
                 </NavContainer>
             </Container>
