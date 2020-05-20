@@ -1,0 +1,13 @@
+
+
+/* InventoryList */
+.inventory-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.item-photo {
+    max-width: 250px;
+}
+
