@@ -1,12 +1,13 @@
+//1.a Import the action types from the action files
 import { LOGIN, GET_ITEMS, GET_ITEMS_SUCCESS, GET_ITEMS_FAILURE,
     GET_ITEMS_USERID, GET_ITEMS_USERID_SUCCESS, GET_ITEMS_USERID_FAILURE,
     GET_ITEM_ID, GET_ITEM_ID_SUCCESS, GET_ITEM_ID_FAILURE,
-
 //     ADD_ITEM, ADD_ITEM_SUCCESS, ADD_ITEM_FAILURE,
     DELETE_ITEM, DELETE_ITEM_SUCCESS, DELETE_ITEM_FAILURE, REGISTER
 
  } from '../actions';
 
+//1.b move the state tree you started with into variable initialState
 const initialState = {
     items: [],
     item: {},
@@ -16,8 +17,17 @@ const initialState = {
     error: null
 }
 
+/* Using a switch case to check the action type of the dispatched action, create
+an updated state tree based on the action type and the action payload 
+Each case in the switch statement returns the new updated state tree
+*/
+
+//1.c Create reducer function, pass in state with a default value of initial state
+// and the dispatched action
 export const reducer = (state = initialState, action) => {
+    //switch is used to perform different actions based on different conditions
     switch (action.type) {
+        //1.d Make a case for each action type
         case LOGIN: 
             return {
                 ...state,
@@ -116,6 +126,7 @@ export const reducer = (state = initialState, action) => {
                 error: action.payload
             }
         default:
+            //1.e Return state untouched
             return state;
     }
 }
