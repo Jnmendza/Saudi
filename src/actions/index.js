@@ -47,6 +47,9 @@ export const getItems = () => dispatch => {
     dispatch({ type: GET_ITEMS });
 
     axiosWithAuth()
+    // pending: initial state, neither fulfilled nor rejected
+    // fulfilled with a value: meaning that the operation completed successfully.
+    // rejected with an error: meaning that the operation failed.
         .get('/items')
         .then(res => {
             console.log(res.data);
