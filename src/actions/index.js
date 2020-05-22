@@ -1,7 +1,12 @@
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-
+//1.a action type is created to avoid hidden bugs and used as the type in the action
 export const LOGIN = 'LOGIN';
 
+//1.b action creator that returns an action object
+/*
+When the action creator is invoke and the action is returned
+it will be dispatched to the reducer
+*/
 export const login = (credentials) => dispatch => {
     dispatch({ type: LOGIN });
 
