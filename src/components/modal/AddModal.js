@@ -14,13 +14,17 @@ function AddModal({ getItems }) {
 
   const [product, setProduct] = useState({ name: '', price: '', city: '', country: '', description: '', user_id: localStorage.getItem('user_id')})
 
-    const changeHandler = e => {
-        let value = e.target.value;
-        setProduct({
-            ...product,
-            [e.target.name]: value
-        })
-    }
+  // 
+  const changeHandler = e => {
+    // event is typing in input, then get the value of the target
+      let value = e.target.value;
+      setProduct({
+        // spread operator brings in the beginning state
+          ...product,
+        // sets the value to the name
+          [e.target.name]: value
+      })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
