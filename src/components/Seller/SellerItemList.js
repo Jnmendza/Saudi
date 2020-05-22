@@ -1,6 +1,8 @@
 import React from 'react';
+//1.b import connect from react-redux
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom"
+//1.a import the action
 import { getItemsUserId } from "../../actions";
 import AddModal from '../modal/AddModal';
 import styled from 'styled-components';
