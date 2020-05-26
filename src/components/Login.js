@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom"
 import HomeSplash from '../images/HomeSplash.jpg'
 import styled from 'styled-components';
 import NavBar from './Navbar'
-import Logoimg from '../images/Logo_white.png'
+// import Logoimg from '../images/Logo_white.png'
 
 const LoginContainer = styled.div`
     background-image: url(${HomeSplash});
