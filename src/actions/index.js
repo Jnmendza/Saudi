@@ -1,7 +1,12 @@
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-
+//1.a action type is created to avoid hidden bugs and used as the type in the action
 export const LOGIN = 'LOGIN';
 
+//1.b action creator that returns an action object
+/*
+When the action creator is invoke and the action is returned
+it will be dispatched to the reducer
+*/
 export const login = (credentials) => dispatch => {
     dispatch({ type: LOGIN });
 
@@ -42,6 +47,9 @@ export const getItems = () => dispatch => {
     dispatch({ type: GET_ITEMS });
 
     axiosWithAuth()
+    // pending: initial state, neither fulfilled nor rejected
+    // fulfilled with a value: meaning that the operation completed successfully.
+    // rejected with an error: meaning that the operation failed.
         .get('/items')
         .then(res => {
             console.log(res.data);

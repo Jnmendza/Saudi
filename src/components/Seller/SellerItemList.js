@@ -1,6 +1,8 @@
 import React from 'react';
+//1.b import connect from react-redux
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom"
+//1.a import the action
 import { getItemsUserId } from "../../actions";
 import AddModal from '../modal/AddModal';
 import styled from 'styled-components';
@@ -57,11 +59,16 @@ class SellerItemList extends React.Component {
     }
 }
 
+//2.a tells connect which pieces of state to pass to the component
+//2.b takes state (whatever the reducer is returning)
 const mapStateToProps = (state) => ({
+    //2.c the properties (left hand-side:) returned are what gets passed as props
+    //2.d the values (:right hand-side)returned are properties from the state object(reducer)
     items: state.items
 })
 
-export default withRouter(connect(
-    mapStateToProps,
-    { getItemsUserId }
-)(SellerItemList));
+//1.c Instead of exporting component, export connect func
+//1.d Inovke connect twice
+//  - First call, pass in a mapStateToProps function and object(action)
+//  - Second call, pass in component being connected
+export default withRouter(connect(mapStateToProps,{getItemsUserId})(SellerItemList));
