@@ -16,12 +16,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
-    // Switch allows us to check the path you put in and it checks it against where the url wher u navigated
         <Switch>
           <Route exact path="/" component={HomePage} />
-    // Protected route. If user is not logged in they cant view SellerPage
-    // This will check to see if we have a token value with the user
           <PrivateRoute path="/seller-page" component={SellerPage} />
           <Route path="/item/:id" component={ItemCard} />
           <Route path='/sign-up' component={SignUp}/>
