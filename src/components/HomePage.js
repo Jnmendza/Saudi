@@ -22,7 +22,7 @@ const Header = styled.div`
 const keyFrames = keyframes`
     0%
     {
-        content: "It's working"
+        content: "We work with civil society organizations"
     }
     75%
     {
@@ -31,7 +31,7 @@ const keyFrames = keyframes`
     }
     100%
     {
-        content: "This might work, did it?"
+        content: "Driving Advocacy and Partnerships?"
     }
 `;
 
